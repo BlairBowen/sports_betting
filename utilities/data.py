@@ -3,27 +3,15 @@ import requests
 import datetime
 import os
 
-def fetch_data(url, file_path=None):
-    # if file_path is not None:
-    #     f = open(f"data/{file_path}", "a+")
-    #     f.close()
-    #     time_modified = os.path.getmtime(f"data/{file_path}")
-    #     time_stamp = datetime.datetime.fromtimestamp(time_modified)
-
-
-    # if file_path is None or time_stamp + datetime.timedelta(hours=1) < datetime.datetime.now() or os.path.getsize(f"data/{file_path}") == 0:
+def fetch_data(url):
     try:
         response = requests.get(url)
         response.raise_for_status()
         json_response = response.json()
-        # if file_path is not None:
-        #     save_local_data(json_response, f"data/{file_path}")
         return json_response
     except requests.exceptions.RequestException as e:
         print(f"Error fetching data: {e}")
         return None
-    # else:
-    #     return load_local_data(f"data/{file_path}")
 
 
 def save_local_data(data, output_file):
@@ -45,3 +33,19 @@ def load_local_data(input_file):
 
     return data
 
+
+def refresh_data(file_path, minutes=15):
+    if file_path is not None:
+        f = open(f"data/{file_path}", "a+")
+        f.close()
+        time_modified = os.path.getmtime(f"data/{file_path}")
+        time_stamp = datetime.datetime.fromtimestamp(time_modified)
+        print(f"last refreshed @ {time_stamp}")
+    
+    if file_path is None or time_stamp + datetime.timedelta(minutes=minutes) < datetime.datetime.now() or os.path.getsize(f"data/{file_path}") == 0:
+        print("updating data")
+        return True
+    else:
+        time_stamp = time_stamp + datetime.timedelta(minutes=minutes)
+        print(f"avalible update @ {time_stamp}")
+        return False

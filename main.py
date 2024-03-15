@@ -1,13 +1,16 @@
-from src.find_locks import find_locks
+import utilities.api as api
 import utilities.data as data_utils
 import utilities.config as config
+import utilities.math as sbm
 import os
 import pandas as pd
+import datetime
+
+picks = [250, -110, -320]
+
 
 def main() -> None:
-    locks = find_locks(sport="nba", diff_threshold=10, pct_threshold=0)
-    print(locks)
-    locks.to_csv("data/locks.csv")
+    print(api.get_todays_game(sport="ncaam"))
     pass
 
 

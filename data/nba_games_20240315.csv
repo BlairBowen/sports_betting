@@ -1,0 +1,7 @@
+,home_team,away_team,game_time,home_ml_open,away_ml_open,home_ml_close,away_ml_close,home_pct,away_pct,home_diff_open,away_diff_open,home_diff_close,away_diff_close,favorite_ml_open,favorite_ml_close,favorite_pct,favorite_diff_open,favorite_diff_close
+401585589,Charlotte Hornets,Phoenix Suns,19:00:00,+360,-450,+400,-525,18.2,81.8,-3.53913043478261,-0.018181818181830067,-1.8000000000000007,-2.200000000000003,away,away,away,away,home
+401585590,Detroit Pistons,Miami Heat,19:00:00,+200,-240,+270,-340,37.0,63.0,3.6666666666666714,-7.588235294117652,9.972972972972972,-14.272727272727266,away,away,away,home,home
+401585591,Toronto Raptors,Orlando Magic,19:30:00,+200,-240,+290,-360,26.9,73.1,-6.43333333333333,2.5117647058823422,1.2589743589743598,-5.160869565217396,away,away,away,away,home
+401585592,New Orleans Pelicans,LA Clippers,20:00:00,-210,+180,-250,+210,63.5,36.5,-4.241935483870961,0.7857142857142847,-7.928571428571431,4.241935483870968,home,home,home,away,away
+401585593,San Antonio Spurs,Denver Nuggets,20:30:00,+425,-550,+400,-535,21.1,78.9,2.052380952380954,-5.7153846153846075,1.1000000000000014,-5.351968503937002,away,away,away,home,home
+401585594,Utah Jazz,Atlanta Hawks,21:30:00,-175,+150,+120,-140,60.0,40.0,-3.636363636363633,0.0,14.545454545454547,-18.333333333333336,home,away,home,away,home
